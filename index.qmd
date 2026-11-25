@@ -2,4 +2,6 @@
 title: "Mallard Duck Movement"
 ---
 
-This is a Quarto website.
+Lake Constance lies where Germany, Switzerland, and Austria meet. This site explores GPS tracking data from 52 individual mallard ducks, collected across the 2007–2017 study period.
+
+Most ducks stayed close to the lake, while a few traveled several hundred kilometers northeast toward Poland and Hungary. Flight activity peaked in July and August, after the breeding season. Visit the **Map** and **Seasons** pages in the navbar to explore the routes and seasonal flight patterns.
