@@ -1,0 +1,36 @@
+---
+title: "Seasons"
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+library(ggridges)
+```
+
+```{r}
+mallards <- read_rds("data/mallards.rds")
+```
+
+```{r}
+mallards |>
+  count(month_num, month)
+```
+
+```{r}
+summary(mallards$speed)
+```
+
+```{r}
+mallards |>
+  filter(speed <= 30) |>
+  mutate(month = fct_reorder(month, month_num)) |>
+  ggplot(aes(x = speed, y = month)) +
+  ggridges::geom_density_ridges() +
+  labs(
+    title = "Mallard speed distributions by month",
+    x = "Speed (m/s)",
+    y = "Month"
+  ) +
+  theme_minimal()
+```
